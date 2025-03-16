@@ -4,12 +4,13 @@ import { catchError, firstValueFrom, pipe } from 'rxjs';
 import { PaginationDto, } from 'src/common';
 import { CreateProductDto } from './product/create-product.dto';
 import { UpdateProductDto } from './product/update-product.dto';
+import { PRODUCT_SERVICE } from '../config';
 
 
 @Controller('products')
 export class ProductsController {
   constructor(
-    @Inject('PRODUCT_SERVICE') private readonly productsClient: ClientProxy,
+    @Inject(PRODUCT_SERVICE) private readonly productsClient: ClientProxy,
   ) { }
 
   @Post()
