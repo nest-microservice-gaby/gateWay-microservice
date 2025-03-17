@@ -48,3 +48,7 @@ Este documento proporciona instrucciones para instalar las dependencias y config
   npm cache clean --force
   ```
 - Consulta la documentación del proyecto para más detalles sobre la configuración.
+
+
+## NATS
+docker run -d --name nats-main -p 4222:4222 -p 6222:6222 -p 8222:8222 nats
