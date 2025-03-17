@@ -23,6 +23,8 @@ const logger = new Logger('main-Gateway');
 
   await app.listen(envs.port);
 
+  console.log('Hola mundo, primer cambio!!!!');
+  
   logger.log(`Gatewy on port #:${envs.port}`);
 }
 bootstrap();
